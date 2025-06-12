@@ -1,9 +1,9 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 import PackageDescription
 let package = Package(
     name: "ZendeskMessagingSDK",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v16)
     ],
     products: [
         .library(
@@ -15,11 +15,11 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "ZendeskMessagingAPISDK",
-                 url: "https://github.com/zendesk/messagingapi_sdk_ios",
-                 .exact("6.0.0")),
+                 url: "https://github.com/dfindley-fetch/messagingapi_sdk_ios",
+                 .branch("6.0.0-ios16-patch")),
         .package(name: "ZendeskCommonUISDK",
-                 url: "https://github.com/zendesk/commonui_sdk_ios",
-                 .exact("9.0.0"))
+                 url: "https://github.com/dfindley-fetch/commonui_sdk_ios",
+                 .branch("9.0.0-ios16-patch"))
     ],
     targets: [
         .binaryTarget(
